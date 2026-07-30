@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://JakeLabate.github.io/rdm-construction-companies/sitemap.xml
+Sitemap: https://jakelabate.github.io/rdm-construction-companies/sitemap.xml

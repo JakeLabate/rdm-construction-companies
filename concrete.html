@@ -77,7 +77,16 @@ li{margin-bottom:.5em}
 .on-dark .lane-thin{background:repeating-linear-gradient(90deg,var(--brand-lt) 0 22px,transparent 22px 34px)}
 
 /* header */
+.util{background:var(--ink);border-bottom:1px solid var(--line-dark);font-size:.79rem}
+.util .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:4px 22px;
+  padding-top:9px;padding-bottom:9px}
+.util p{margin:0;color:var(--paper-dim)}
+.util nav{margin-left:auto;display:flex;gap:20px}
+.util a{color:var(--paper);text-decoration:none;font-weight:600}
+.util a:hover{color:var(--brand-lt);text-decoration:underline}
+.util a[aria-current="page"]{color:var(--brand-lt)}
 .masthead{position:sticky;top:0;z-index:40;background:var(--ink);color:var(--paper)}
+.masthead .lane{margin:0}
 .masthead a{color:var(--paper);text-decoration:none}
 .bar{display:flex;align-items:center;gap:20px;min-height:70px}
 .mark{display:flex;align-items:center;gap:11px;font-weight:800;flex:0 0 auto}
@@ -111,10 +120,11 @@ li{margin-bottom:.5em}
   letter-spacing:.01em;border:2px solid var(--brand)}
 .btn-solid{background:var(--brand);color:var(--paper)}
 .btn-solid:hover{background:var(--paper);border-color:var(--paper);color:var(--brand)}
-.btn-ghost{background:transparent;color:var(--paper)}
-.btn-ghost:hover{background:var(--brand);color:var(--paper);border-color:var(--brand)}
-.on-light .btn-ghost{color:var(--ink);border-color:var(--ink)}
-.on-light .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.hero .btn-ghost,.on-dark .btn-ghost,.band .btn-ghost{color:var(--paper);border-color:var(--paper)}
+.hero .btn-ghost:hover,.on-dark .btn-ghost:hover,.band .btn-ghost:hover{
+  background:var(--brand);color:var(--paper);border-color:var(--brand)}
 
 /* the signature: field spec strip */
 .specs{background:var(--ink);color:var(--paper);border-top:1px solid var(--line-dark)}
@@ -131,6 +141,7 @@ li{margin-bottom:.5em}
 
 /* sections */
 section{padding:clamp(56px,8vw,96px) 0}
+section.hero,section.specs,section.band{padding:0}
 .on-shell{background:var(--shell)}
 .on-dark{background:var(--ink);color:var(--paper)}
 .on-dark a{color:var(--brand-lt)}
@@ -155,10 +166,12 @@ section{padding:clamp(56px,8vw,96px) 0}
 .ticks{list-style:none;padding:0;margin:0;display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px 30px}
 .ticks li{position:relative;padding-left:30px;margin-bottom:14px;line-height:1.55}
+.ticks li:last-child{margin-bottom:0}
+.steps li:last-child{margin-bottom:0}
 .ticks li::before{content:"";position:absolute;left:0;top:.55em;width:16px;height:4px;
   background:var(--brand)}
 .on-dark .ticks li::before{background:var(--brand-lt)}
-.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+.steps{list-style:none;padding:0;margin:0;counter-reset:s;max-width:68ch}
 .steps li{counter-increment:s;position:relative;padding-left:56px;margin-bottom:22px}
 .steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:0;
   font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:.85rem;color:var(--brand);
@@ -170,6 +183,8 @@ section{padding:clamp(56px,8vw,96px) 0}
 @media(min-width:900px){.split{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:56px}}
 .block{border-top:2px solid var(--ink);padding-top:22px;margin-bottom:38px}
 .on-dark .block{border-top-color:var(--brand-lt)}
+.block:last-child{margin-bottom:0}
+.block p,.block ul{max-width:72ch}
 .block h3{font-size:1.32rem;margin-bottom:.5em}
 .aside{background:var(--shell);border-left:5px solid var(--brand);padding:24px 24px 8px}
 .on-dark .aside{background:var(--ink);border:1px solid var(--line-dark);border-left:5px solid var(--brand-lt)}
@@ -181,7 +196,7 @@ section{padding:clamp(56px,8vw,96px) 0}
 /* work panels: photo under a scrim, label over it */
 .panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
 .panel{position:relative;display:flex;align-items:flex-end;aspect-ratio:3/2;
-  text-decoration:none;border:1px solid var(--line);
+  text-decoration:none;color:var(--paper);border:1px solid var(--line);background-color:var(--ink);
   background-image:linear-gradient(var(--scrim-a),var(--scrim-b)),var(--panel-src);
   background-size:cover;background-position:center}
 .panel span{font-family:"Big Shoulders Display",sans-serif;font-weight:800;text-transform:uppercase;
@@ -234,7 +249,7 @@ section{padding:clamp(56px,8vw,96px) 0}
 .band{background:var(--ink);color:var(--paper)}
 .band .wrap{padding-top:52px;padding-bottom:52px}
 .band h2{margin-bottom:.3em;max-width:20ch;color:var(--paper)}
-.band p{max-width:60ch;font-weight:500;color:var(--paper-dim)}
+.band p{max-width:62ch;font-weight:500;color:var(--paper-dim)}
 .band a.btn{border-color:var(--brand)}
 .band .btn-solid{background:var(--brand);color:var(--paper)}
 .band .btn-solid:hover{background:var(--paper);color:var(--brand);border-color:var(--paper)}
@@ -252,9 +267,12 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 .fgrid li{margin-bottom:8px}
 .fbot{border-top:1px solid var(--line-dark);padding-top:22px;display:flex;flex-wrap:wrap;
   gap:14px 26px;justify-content:space-between;font-size:.86rem}
-.fbot p{margin:0}
+.fbot p{margin:0;max-width:56ch}
+.fbot .credit{width:100%;padding-top:16px;margin-top:4px;border-top:1px solid var(--line-dark);color:var(--paper-dim)}
 
-@media(max-width:940px){
+@media(max-width:1100px){
+  .util p{display:none}
+  .util nav{margin-left:0}
   .menu-toggle{display:block}
   .nav{display:none;order:3;width:100%;flex-direction:column;align-items:stretch;
     gap:0;padding-bottom:14px}
@@ -457,6 +475,12 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
+<div class="util">
+<div class="wrap">
+<p>Proudly serving the Greater Capital Region of New York State</p>
+<nav aria-label="Secondary"><a href="about.html">About</a><a href="locations.html">Service area</a><a href="contact.html">Contact</a></nav>
+</div>
+</div>
 <header class="masthead">
 <div class="wrap bar">
 <a class="mark" href="index.html">
@@ -464,12 +488,11 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <span class="wordmark">RDM Construction<span>Companies LLC</span></span>
 </a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav class="nav" id="nav" aria-label="Main"><a href="services.html">Services</a><a href="paving.html">Paving</a><a href="concrete.html" aria-current="page">Concrete</a><a href="site-work.html">Site work</a><a href="snow-removal.html">Snow</a><a href="commercial.html">Commercial</a><a href="locations.html">Locations</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<nav class="nav" id="nav" aria-label="Main"><a href="services.html">Services</a><a href="paving.html">Paving</a><a href="concrete.html" aria-current="page">Concrete</a><a href="site-work.html">Site work</a><a href="snow-removal.html">Snow</a><a href="commercial.html">Commercial</a></nav>
 <a class="callbtn" href="tel:+15184148789">Call (518) 414-8789</a>
 </div>
-</header>
 <hr class="lane">
-
+</header>
 <main id="main">
 <section class="hero hero-photo" style="--hero-src:url('img/hero-concrete.webp')">
 <div class="wrap">
@@ -571,7 +594,8 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <p>The Greater Capital Region of New York State. If your address is not on this list, call and we will confirm coverage.</p></div>
 <dl class="dl"><div><dt>Saratoga County</dt><dd>Saratoga Springs, Wilton, Malta, Ballston Spa, Clifton Park, Mechanicville, Stillwater, Greenfield, Galway, Milton and Round Lake</dd></div><div><dt>Albany County</dt><dd>Albany, Colonie, Guilderland, Bethlehem, Cohoes, Watervliet, Latham and Loudonville</dd></div><div><dt>Schenectady County</dt><dd>Schenectady, Niskayuna, Glenville, Rotterdam and Scotia</dd></div><div><dt>Rensselaer County</dt><dd>Troy, East Greenbush, North Greenbush and Rensselaer</dd></div></dl>
 </div>
-</section><section class="band">
+</section><hr class="lane">
+<section class="band">
 <div class="wrap">
 <h2>Free estimate. Written, itemized, no obligation.</h2>
 <p>Tell us the property, the problem, and a photo if you have one. We come out, assess the site, and send a written number. Call, text, or email and we will get you on the schedule.</p>
@@ -636,6 +660,7 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <div class="fbot">
 <p>RDM Construction Companies LLC, Saratoga Springs, New York. Licensed and insured. Family owned and locally operated.</p>
 <p>Serving Saratoga, Albany, Schenectady and Rensselaer counties.</p>
+<p class="credit">Site by <a href="https://www.linkedin.com/in/alexander-damato-seo/" rel="noopener">Alex D&rsquo;Amato</a></p>
 </div>
 </div>
 </footer>

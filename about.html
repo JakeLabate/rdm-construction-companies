@@ -212,6 +212,24 @@ section{padding:clamp(56px,8vw,96px) 0}
 .on-dark .dl dt{color:var(--brand-lt)}
 .dl dd{margin:6px 0 16px;font-weight:600;line-height:1.5}
 
+/* table */
+.tbl{width:100%;border-collapse:collapse;font-size:.93rem;margin-bottom:1.4em}
+.tbl th,.tbl td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--brand);border-bottom:2px solid var(--ink)}
+.tbl td:first-child{font-weight:700}
+.scroller{overflow-x:auto}
+
+/* index grid for the services hub */
+.idx{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:0 34px}
+.idx section{padding:0}
+.idx h3{border-top:2px solid var(--brand);padding-top:14px;margin-bottom:.6em}
+.idx ul{list-style:none;padding:0;margin:0 0 34px}
+.idx li{margin-bottom:9px}
+.idx a{text-decoration:none;font-weight:600}
+.idx a:hover{text-decoration:underline}
+.idx span{display:block;font-size:.88rem;color:var(--muted);font-weight:400;line-height:1.45}
+
 /* cta band */
 .band{background:var(--ink);color:var(--paper)}
 .band .wrap{padding-top:52px;padding-bottom:52px}
@@ -390,7 +408,7 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
      "name": "What areas do you serve?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "The Capital Region of New York State, including Saratoga County, Albany County, Schenectady County and Rensselaer County. Call to confirm coverage for a specific location."
+      "text": "The Capital Region of New York State, including Saratoga County, Albany County, Schenectady County and Rensselaer County, plus Queensbury and Glens Falls. Call to confirm coverage for a specific location."
      }
     },
     {
@@ -408,6 +426,14 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
       "@type": "Answer",
       "text": "Yes. All work carries a one year workmanship and materials warranty, provided in writing, across every service we offer. If something is not right inside that period, we make it right."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you subcontract any of the work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Our own crews do the work, which is the reason the company that quoted the job is the company that shows up to do it and the company that stands behind it afterward."
+     }
     }
    ]
   }
@@ -424,18 +450,18 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <span class="wordmark">RDM Construction<span>Companies LLC</span></span>
 </a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav class="nav" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="paving.html">Paving</a><a href="concrete.html">Concrete</a><a href="site-work.html">Site work</a><a href="snow-removal.html">Snow removal</a><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a></nav>
+<nav class="nav" id="nav" aria-label="Main"><a href="services.html">Services</a><a href="paving.html">Paving</a><a href="concrete.html">Concrete</a><a href="site-work.html">Site work</a><a href="snow-removal.html">Snow</a><a href="commercial.html">Commercial</a><a href="locations.html">Locations</a><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a></nav>
 <a class="callbtn" href="tel:+15184148789">Call (518) 414-8789</a>
 </div>
 </header>
 <hr class="lane">
 
 <main id="main">
-<section class="hero">
+<section class="hero hero-photo" style="--hero-src:url('img/hero-about.webp')">
 <div class="wrap">
 <p class="eyebrow">About &middot; Family owned, Saratoga Springs NY</p>
 <h1>Forty years<br>of the same<br>four counties</h1>
-<div class="hero-sub"><p class="lede">RDM Construction Companies LLC is a family owned and locally operated construction company based in Saratoga Springs, New York. We provide concrete, paving, sealcoating, line striping, excavation and snow removal services to Albany, Saratoga, Schenectady, Rensselaer and the surrounding counties.</p></div>
+<div class="hero-sub"><p class="lede">RDM Construction Companies LLC is a family owned and locally operated construction company based in Saratoga Springs, New York. We provide concrete, paving, sealcoating, line striping, excavation, drainage and snow removal services to Albany, Saratoga, Schenectady, Rensselaer and the surrounding counties.</p></div>
 <div class="actions">
 <a class="btn btn-solid" href="contact.html">Request a free estimate</a>
 <a class="btn btn-ghost" href="tel:+15184148789">Call (518) 414-8789</a>
@@ -451,11 +477,12 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <h3>How we work</h3>
 <ul class="ticks">
 <li>We do not subcontract laborers. Our crews show up and stand behind their own work.</li>
-<li>Licensed and insured in New York State, family owned and locally operated.</li>
-<li>Free, no obligation estimates, written and itemized before work begins.</li>
-<li>Price match against written quotes from licensed, reputable competitors.</li>
-<li>One year workmanship and material warranty, in writing, on every project.</li>
-<li>10% discount for first responders, active military and veterans.</li>
+<li>Family owned and locally operated, licensed and insured in New York State</li>
+<li>Over 40 years in concrete, paving and excavation across the Capital Region</li>
+<li>Free, no obligation estimates, written and itemized before work starts</li>
+<li>One year workmanship and material warranty, in writing, on every project</li>
+<li>Price match against written quotes from licensed, reputable competitors</li>
+<li>10% discount for first responders, active military and veterans</li>
 </ul>
 </div>
 <div>
@@ -486,23 +513,25 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <li><strong>Clear and excavate.</strong> Trees, brush and debris off the lot, then the dig for foundations, basements, septic or utility runs, taken at or below frost depth.</li>
 <li><strong>Trench and connect.</strong> Water, sewer, electrical and drainage lines set at code depth, with 811 called before the first bucket goes in the ground.</li>
 <li><strong>Grade.</strong> Rough grade to establish elevation, then finish grade so water leaves the property instead of pooling against it.</li>
+<li><strong>Build structure.</strong> Retaining walls where the grade needs holding, set on a compacted base below frost line with drainage behind them.</li>
 <li><strong>Pour and pave.</strong> Concrete flatwork and structural pours, or asphalt installation and overlay, on a base that was actually compacted.</li>
 <li><strong>Seal and stripe.</strong> Crack fill, sealcoat, then line striping once the sealer has cured, to current ADA standards where they apply.</li>
 <li><strong>Maintain.</strong> Sealcoat on a two to three year cycle, restripe as needed, and plow and salt through the winter.</li>
 </ol>
 </div>
 </section>
-
-<section>
+<section class="">
 <div class="wrap">
-<div class="head">
-<hr class="lane-thin">
-<h2>Answers to the questions we get most</h2>
+<div class="head"><hr class="lane-thin"><h2>Answers to the questions we get most</h2></div>
+<div class="faq"><details><summary>What types of projects does RDM Construction handle?</summary><div class="a"><p>Exterior construction work across a wide range: asphalt paving and sealcoating, line striping, concrete installation and repair, excavation and site grading, utility trenching, retaining walls, lot and site clearing, water and sewer line installation, drainage systems, EV charging station site prep, and snow plowing and removal. Residential and commercial, throughout Saratoga Springs and the Capital Region.</p></div></details><details><summary>What areas do you serve?</summary><div class="a"><p>The Capital Region of New York State, including Saratoga County, Albany County, Schenectady County and Rensselaer County, plus Queensbury and Glens Falls. Call to confirm coverage for a specific location.</p></div></details><details><summary>Do you offer free estimates?</summary><div class="a"><p>Yes. Every estimate is free and carries no obligation. We provide written, itemized quotes before any work begins, with no vague ranges and no call for pricing.</p></div></details><details><summary>Do you offer a warranty?</summary><div class="a"><p>Yes. All work carries a one year workmanship and materials warranty, provided in writing, across every service we offer. If something is not right inside that period, we make it right.</p></div></details><details><summary>Do you subcontract any of the work?</summary><div class="a"><p>No. Our own crews do the work, which is the reason the company that quoted the job is the company that shows up to do it and the company that stands behind it afterward.</p></div></details></div>
 </div>
-<div class="faq"><details><summary>What types of projects does RDM Construction handle?</summary><div class="a"><p>Exterior construction work across a wide range: asphalt paving and sealcoating, line striping, concrete installation and repair, excavation and site grading, utility trenching, retaining walls, lot and site clearing, water and sewer line installation, drainage systems, EV charging station site prep, and snow plowing and removal. Residential and commercial, throughout Saratoga Springs and the Capital Region.</p></div></details><details><summary>What areas do you serve?</summary><div class="a"><p>The Capital Region of New York State, including Saratoga County, Albany County, Schenectady County and Rensselaer County. Call to confirm coverage for a specific location.</p></div></details><details><summary>Do you offer free estimates?</summary><div class="a"><p>Yes. Every estimate is free and carries no obligation. We provide written, itemized quotes before any work begins, with no vague ranges and no call for pricing.</p></div></details><details><summary>Do you offer a warranty?</summary><div class="a"><p>Yes. All work carries a one year workmanship and materials warranty, provided in writing, across every service we offer. If something is not right inside that period, we make it right.</p></div></details></div>
+</section><section class="on-shell">
+<div class="wrap">
+<div class="head"><hr class="lane-thin"><h2>Where we work</h2>
+<p>The Greater Capital Region of New York State. If your address is not on this list, call and we will confirm coverage.</p></div>
+<dl class="dl"><div><dt>Saratoga County</dt><dd>Saratoga Springs, Wilton, Malta, Ballston Spa, Clifton Park, Mechanicville, Stillwater, Greenfield, Galway, Milton and Round Lake</dd></div><div><dt>Albany County</dt><dd>Albany, Colonie, Guilderland, Bethlehem, Cohoes, Watervliet, Latham and Loudonville</dd></div><div><dt>Schenectady County</dt><dd>Schenectady, Niskayuna, Glenville, Rotterdam and Scotia</dd></div><div><dt>Rensselaer County</dt><dd>Troy, East Greenbush, North Greenbush and Rensselaer</dd></div></dl>
 </div>
-</section>
-<section class="band">
+</section><section class="band">
 <div class="wrap">
 <h2>Free estimate. Written, itemized, no obligation.</h2>
 <p>Tell us the property, the problem, and a photo if you have one. We come out, assess the site, and send a written number. Call, text, or email and we will get you on the schedule.</p>
@@ -520,46 +549,45 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <h4>Pavement</h4>
 <ul>
 <li><a href="paving.html">Asphalt paving and resurfacing</a></li>
-<li><a href="paving.html#sealcoating">Asphalt sealcoating</a></li>
-<li><a href="paving.html#striping">Line striping</a></li>
+<li><a href="driveway-paving.html">Driveway paving</a></li>
+<li><a href="sealcoating.html">Asphalt sealcoating</a></li>
+<li><a href="line-striping.html">Line striping and ADA layout</a></li>
 <li><a href="concrete.html">Concrete installation and repair</a></li>
 </ul>
 </div>
 <div>
 <h4>Site work</h4>
 <ul>
-<li><a href="site-work.html">Excavation and trenching</a></li>
-<li><a href="site-work.html#grading">Site grading</a></li>
-<li><a href="site-work.html#clearing">Lot and site clearing</a></li>
-<li><a href="site-work.html#drainage">Water, sewer and drainage</a></li>
-<li><a href="site-work.html#walls">Retaining walls</a></li>
+<li><a href="site-work.html">Excavation, trenching and grading</a></li>
+<li><a href="drainage.html">Water, sewer and drainage</a></li>
+<li><a href="site-clearing.html">Lot and site clearing</a></li>
+<li><a href="retaining-walls.html">Retaining wall design and installation</a></li>
 </ul>
 </div>
 <div>
-<h4>Winter</h4>
+<h4>Winter and commercial</h4>
 <ul>
-<li><a href="snow-removal.html">Commercial snow plowing</a></li>
-<li><a href="snow-removal.html#residential">Residential plowing</a></li>
-<li><a href="snow-removal.html#deicing">De-icing and salting</a></li>
+<li><a href="snow-removal.html">Snow plowing and removal</a></li>
+<li><a href="commercial.html">Commercial property services</a></li>
+<li><a href="services.html">All services</a></li>
+</ul>
+</div>
+<div>
+<h4>Where we work</h4>
+<ul>
+<li><a href="locations.html">Service area</a></li>
+<li><a href="malta.html">Asphalt paving in Malta, NY</a></li>
+<li><a href="tel:+15184148789">(518) 414-8789</a></li>
+<li><a href="mailto:ronniemariani@rdmcc.com">ronniemariani@rdmcc.com</a></li>
 </ul>
 </div>
 <div>
 <h4>Company</h4>
 <ul>
 <li><a href="about.html">About RDM Construction</a></li>
-<li><a href="contact.html">Contact and service area</a></li>
-<li><a href="tel:+15184148789">(518) 414-8789</a></li>
-<li><a href="mailto:ronniemariani@rdmcc.com">ronniemariani@rdmcc.com</a></li>
-</ul>
-</div>
-<div>
-<h4>Hours</h4>
-<ul>
+<li><a href="contact.html">Contact and free estimates</a></li>
 <li>Mon to Fri, 7:00 am to 6:00 pm</li>
 <li>Sat and Sun, 8:00 am to 5:00 pm</li>
-</ul>
-<h4 class="stack">Follow</h4>
-<ul>
 <li><a href="https://facebook.com/554480981076963" rel="noopener">Facebook</a></li>
 <li><a href="https://www.yelp.com/biz/rdm-asphalt-and-construction-saratoga-springs" rel="noopener">Yelp</a></li>
 </ul>

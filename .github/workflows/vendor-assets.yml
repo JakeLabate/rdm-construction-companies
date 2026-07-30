@@ -1,0 +1,69 @@
+name: Vendor brand assets
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  vendor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download assets
+        run: |
+          set +e
+          mkdir -p "$(dirname 'img/logo.webp')"
+          echo 'Fetching img/logo.webp'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/logo.webp' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/69fd37481b20876355f25f7b_rdm-construction-companies-llc-logo-1920w.webp' || echo '  MISS img/logo.webp'
+          mkdir -p "$(dirname 'img/src-paving.webp')"
+          echo 'Fetching img/src-paving.webp'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/src-paving.webp' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/6a027a9d32785ffe74d1c847_Paving.webp' || echo '  MISS img/src-paving.webp'
+          mkdir -p "$(dirname 'img/src-excavation.webp')"
+          echo 'Fetching img/src-excavation.webp'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/src-excavation.webp' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/6a027afcd2a94fc7a3970525_Excavation.webp' || echo '  MISS img/src-excavation.webp'
+          mkdir -p "$(dirname 'img/src-snow.jpg')"
+          echo 'Fetching img/src-snow.jpg'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/src-snow.jpg' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/6a027bc3f6715643fec72e0e_Snow%20Plow.jpg' || echo '  MISS img/src-snow.jpg'
+          mkdir -p "$(dirname 'img/src-striping.jpg')"
+          echo 'Fetching img/src-striping.jpg'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/src-striping.jpg' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/6a027b30f1f984d393a95070_Line%20Striping.jpg' || echo '  MISS img/src-striping.jpg'
+          mkdir -p "$(dirname 'img/src-crew5.webp')"
+          echo 'Fetching img/src-crew5.webp'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/src-crew5.webp' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/6a0279f85cbe6ce73070177a_Ronnie%205.webp' || echo '  MISS img/src-crew5.webp'
+          mkdir -p "$(dirname 'img/src-crew1.webp')"
+          echo 'Fetching img/src-crew1.webp'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/src-crew1.webp' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/6a027a5279438a9ef8814b5a_Ronnie%201.webp' || echo '  MISS img/src-crew1.webp'
+          mkdir -p "$(dirname 'img/src-tree.webp')"
+          echo 'Fetching img/src-tree.webp'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/src-tree.webp' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/6a027c5384403dd5c3f3f805_Tree.webp' || echo '  MISS img/src-tree.webp'
+          mkdir -p "$(dirname 'img/src-job1756.png')"
+          echo 'Fetching img/src-job1756.png'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/src-job1756.png' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/6a027dc13ce48c6663f73da9_9408a769bc19b8a3de7eb7b0dfc5f327_IMG_1756.png' || echo '  MISS img/src-job1756.png'
+          mkdir -p "$(dirname 'img/src-job2268.png')"
+          echo 'Fetching img/src-job2268.png'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/src-job2268.png' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/6a1768f8719f7ecaa280373a_IMG_2268%20(1).png' || echo '  MISS img/src-job2268.png'
+          mkdir -p "$(dirname 'img/src-concrete.webp')"
+          echo 'Fetching img/src-concrete.webp'
+          curl -fsSL --max-time 30 --max-filesize 10485760 -A 'Mozilla/5.0 (compatible; site-builder)' -o 'img/src-concrete.webp' 'https://cdn.prod.website-files.com/69f9347c3f31317dd33a8d92/6a03f34b0e5eb413d8183989_L17A0672.webp' || echo '  MISS img/src-concrete.webp'
+      - name: Drop anything that is not a real image
+        run: |
+          for f in $(git status --porcelain --untracked-files=all | awk '{print $2}'); do
+            case "$f" in .github/*) continue;; esac
+            if [ -f "$f" ]; then
+              t=$(file -b --mime-type "$f")
+              case "$t" in
+                image/*|font/*|application/font*) : ;;
+                text/xml|application/xml|text/plain)
+                  # SVG is reported inconsistently across `file` versions.
+                  if head -c 1024 "$f" | grep -qi '<svg'; then :; else
+                    echo "  DROP $f ($t, not an svg)"; rm -f "$f"; fi ;;
+                *) echo "  DROP $f ($t)"; rm -f "$f" ;;
+              esac
+            fi
+          done
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --staged --quiet && echo 'nothing vendored' && exit 0
+          git commit -m 'Vendor brand assets'
+          git push

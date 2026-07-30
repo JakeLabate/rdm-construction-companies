@@ -212,6 +212,24 @@ section{padding:clamp(56px,8vw,96px) 0}
 .on-dark .dl dt{color:var(--brand-lt)}
 .dl dd{margin:6px 0 16px;font-weight:600;line-height:1.5}
 
+/* table */
+.tbl{width:100%;border-collapse:collapse;font-size:.93rem;margin-bottom:1.4em}
+.tbl th,.tbl td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--brand);border-bottom:2px solid var(--ink)}
+.tbl td:first-child{font-weight:700}
+.scroller{overflow-x:auto}
+
+/* index grid for the services hub */
+.idx{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:0 34px}
+.idx section{padding:0}
+.idx h3{border-top:2px solid var(--brand);padding-top:14px;margin-bottom:.6em}
+.idx ul{list-style:none;padding:0;margin:0 0 34px}
+.idx li{margin-bottom:9px}
+.idx a{text-decoration:none;font-weight:600}
+.idx a:hover{text-decoration:underline}
+.idx span{display:block;font-size:.88rem;color:var(--muted);font-weight:400;line-height:1.45}
+
 /* cta band */
 .band{background:var(--ink);color:var(--paper)}
 .band .wrap{padding-top:52px;padding-bottom:52px}
@@ -378,7 +396,7 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
    "@id": "https://jakelabate.github.io/rdm-construction-companies/snow-removal.html#service",
    "name": "Snow plowing, de-icing and snow removal",
    "serviceType": "Snow plowing, de-icing and snow removal",
-   "description": "Commercial and residential snow plowing, post storm salting and de-icing, sidewalk clearing, pre-treatment and off site snow hauling on seasonal and per storm contracts in Saratoga County, New York.",
+   "description": "Commercial and residential snow plowing, post storm salting and de-icing, sidewalk clearing, liquid pre-treatment and off site snow hauling on seasonal and per storm contracts in Saratoga County, New York.",
    "provider": {
     "@id": "https://jakelabate.github.io/rdm-construction-companies/#org"
    },
@@ -433,6 +451,14 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
     },
     {
      "@type": "Question",
+     "name": "Do you offer pre-treatment or anti-icing?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. For commercial properties that need proactive management, such as medical facilities, high traffic retail and properties with pedestrian heavy entries, we can apply liquid de-icer before a storm arrives. Pre-treatment stops ice bonding to the surface, which cuts post storm clearing time and material use."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "What happens during a major storm when you have a full route?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -462,7 +488,7 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <span class="wordmark">RDM Construction<span>Companies LLC</span></span>
 </a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav class="nav" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="paving.html">Paving</a><a href="concrete.html">Concrete</a><a href="site-work.html">Site work</a><a href="snow-removal.html" aria-current="page">Snow removal</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<nav class="nav" id="nav" aria-label="Main"><a href="services.html">Services</a><a href="paving.html">Paving</a><a href="concrete.html">Concrete</a><a href="site-work.html">Site work</a><a href="snow-removal.html" aria-current="page">Snow</a><a href="commercial.html">Commercial</a><a href="locations.html">Locations</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
 <a class="callbtn" href="tel:+15184148789">Call (518) 414-8789</a>
 </div>
 </header>
@@ -524,17 +550,18 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 </div>
 </div>
 </section>
-
 <section class="on-shell">
 <div class="wrap">
-<div class="head">
-<hr class="lane-thin">
-<h2>Snow service questions we get</h2>
+<div class="head"><hr class="lane-thin"><h2>Snow service questions we get</h2></div>
+<div class="faq"><details><summary>When should I sign a seasonal snow contract?</summary><div class="a"><p>September or October. Plowing contractors in the Capital Region fill their route capacity before the season starts, so waiting for the first forecast puts you in line behind everyone else who waited. We begin taking seasonal contracts in late summer.</p></div></details><details><summary>What is a trigger depth and how does it work?</summary><div class="a"><p>A trigger depth is the accumulation threshold that starts a plow visit. Most residential contracts trigger at 2 inches, commercial contracts at 1 to 2 inches depending on property type. If snow reaches the threshold we plow. If it does not, there is no visit and no charge. Trigger depths are documented in the service agreement before the season starts.</p></div></details><details><summary>Does Saratoga Springs require businesses to clear sidewalks?</summary><div class="a"><p>Yes. The city requires property owners and businesses to clear public sidewalks adjacent to their property within a set window after snowfall ends. If you do not, the city can clear the walk and bill you, typically at a higher rate than a private contractor charges. We include sidewalk clearing in commercial service scopes.</p></div></details><details><summary>What is the difference between plowing and snow removal?</summary><div class="a"><p>Plowing moves snow from the driving and parking surface to a pile elsewhere on the property. Removal means loading that snow onto trucks and hauling it off site. Plowing is standard service. Removal becomes necessary once a property has no storage capacity left, which usually happens after several consecutive storms without a real melt.</p></div></details><details><summary>Is salting included with plowing?</summary><div class="a"><p>Yes. Post storm salting is part of standard commercial and residential service, applied after each plow visit to handle residual ice and prevent refreeze. Below about 15 degrees Fahrenheit we switch to calcium chloride or magnesium chloride, which stay effective at temperatures where standard rock salt does not.</p></div></details><details><summary>Do you offer pre-treatment or anti-icing?</summary><div class="a"><p>Yes. For commercial properties that need proactive management, such as medical facilities, high traffic retail and properties with pedestrian heavy entries, we can apply liquid de-icer before a storm arrives. Pre-treatment stops ice bonding to the surface, which cuts post storm clearing time and material use.</p></div></details><details><summary>What happens during a major storm when you have a full route?</summary><div class="a"><p>Contracted customers are plowed before call in requests, in priority tier order, commercial and high need properties first and then residential. That ordering is the main practical reason to sign before the season rather than calling during a storm.</p></div></details><details><summary>Am I liable if someone slips on my property after a storm?</summary><div class="a"><p>Generally yes. Property owners and businesses in New York have a duty to maintain safe premises, which includes clearing snow and ice within a reasonable time after a storm. We are not attorneys and this is not legal advice, but it is a large part of why commercial property managers contract snow service rather than handling it reactively. Documented, contracted service is also useful evidence if a claim is made.</p></div></details></div>
 </div>
-<div class="faq"><details><summary>When should I sign a seasonal snow contract?</summary><div class="a"><p>September or October. Plowing contractors in the Capital Region fill their route capacity before the season starts, so waiting for the first forecast puts you in line behind everyone else who waited. We begin taking seasonal contracts in late summer.</p></div></details><details><summary>What is a trigger depth and how does it work?</summary><div class="a"><p>A trigger depth is the accumulation threshold that starts a plow visit. Most residential contracts trigger at 2 inches, commercial contracts at 1 to 2 inches depending on property type. If snow reaches the threshold we plow. If it does not, there is no visit and no charge. Trigger depths are documented in the service agreement before the season starts.</p></div></details><details><summary>Does Saratoga Springs require businesses to clear sidewalks?</summary><div class="a"><p>Yes. The city requires property owners and businesses to clear public sidewalks adjacent to their property within a set window after snowfall ends. If you do not, the city can clear the walk and bill you, typically at a higher rate than a private contractor charges. We include sidewalk clearing in commercial service scopes.</p></div></details><details><summary>What is the difference between plowing and snow removal?</summary><div class="a"><p>Plowing moves snow from the driving and parking surface to a pile elsewhere on the property. Removal means loading that snow onto trucks and hauling it off site. Plowing is standard service. Removal becomes necessary once a property has no storage capacity left, which usually happens after several consecutive storms without a real melt.</p></div></details><details><summary>Is salting included with plowing?</summary><div class="a"><p>Yes. Post storm salting is part of standard commercial and residential service, applied after each plow visit to handle residual ice and prevent refreeze. Below about 15 degrees Fahrenheit we switch to calcium chloride or magnesium chloride, which stay effective at temperatures where standard rock salt does not.</p></div></details><details><summary>What happens during a major storm when you have a full route?</summary><div class="a"><p>Contracted customers are plowed before call in requests, in priority tier order, commercial and high need properties first and then residential. That ordering is the main practical reason to sign before the season rather than calling during a storm.</p></div></details><details><summary>Am I liable if someone slips on my property after a storm?</summary><div class="a"><p>Generally yes. Property owners and businesses in New York have a duty to maintain safe premises, which includes clearing snow and ice within a reasonable time after a storm. We are not attorneys and this is not legal advice, but it is a large part of why commercial property managers contract snow service rather than handling it reactively. Documented, contracted service is also useful evidence if a claim is made.</p></div></details></div>
+</section><section class="on-dark">
+<div class="wrap">
+<div class="head"><hr class="lane-thin"><h2>Where we work</h2>
+<p>The Greater Capital Region of New York State. If your address is not on this list, call and we will confirm coverage.</p></div>
+<dl class="dl"><div><dt>Saratoga County</dt><dd>Saratoga Springs, Wilton, Malta, Ballston Spa, Clifton Park, Mechanicville, Stillwater, Greenfield, Galway, Milton and Round Lake</dd></div><div><dt>Albany County</dt><dd>Albany, Colonie, Guilderland, Bethlehem, Cohoes, Watervliet, Latham and Loudonville</dd></div><div><dt>Schenectady County</dt><dd>Schenectady, Niskayuna, Glenville, Rotterdam and Scotia</dd></div><div><dt>Rensselaer County</dt><dd>Troy, East Greenbush, North Greenbush and Rensselaer</dd></div></dl>
 </div>
-</section>
-<section class="band">
+</section><section class="band">
 <div class="wrap">
 <h2>Free estimate. Written, itemized, no obligation.</h2>
 <p>Tell us the property, the problem, and a photo if you have one. We come out, assess the site, and send a written number. Call, text, or email and we will get you on the schedule.</p>
@@ -552,46 +579,45 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <h4>Pavement</h4>
 <ul>
 <li><a href="paving.html">Asphalt paving and resurfacing</a></li>
-<li><a href="paving.html#sealcoating">Asphalt sealcoating</a></li>
-<li><a href="paving.html#striping">Line striping</a></li>
+<li><a href="driveway-paving.html">Driveway paving</a></li>
+<li><a href="sealcoating.html">Asphalt sealcoating</a></li>
+<li><a href="line-striping.html">Line striping and ADA layout</a></li>
 <li><a href="concrete.html">Concrete installation and repair</a></li>
 </ul>
 </div>
 <div>
 <h4>Site work</h4>
 <ul>
-<li><a href="site-work.html">Excavation and trenching</a></li>
-<li><a href="site-work.html#grading">Site grading</a></li>
-<li><a href="site-work.html#clearing">Lot and site clearing</a></li>
-<li><a href="site-work.html#drainage">Water, sewer and drainage</a></li>
-<li><a href="site-work.html#walls">Retaining walls</a></li>
+<li><a href="site-work.html">Excavation, trenching and grading</a></li>
+<li><a href="drainage.html">Water, sewer and drainage</a></li>
+<li><a href="site-clearing.html">Lot and site clearing</a></li>
+<li><a href="retaining-walls.html">Retaining wall design and installation</a></li>
 </ul>
 </div>
 <div>
-<h4>Winter</h4>
+<h4>Winter and commercial</h4>
 <ul>
-<li><a href="snow-removal.html">Commercial snow plowing</a></li>
-<li><a href="snow-removal.html#residential">Residential plowing</a></li>
-<li><a href="snow-removal.html#deicing">De-icing and salting</a></li>
+<li><a href="snow-removal.html">Snow plowing and removal</a></li>
+<li><a href="commercial.html">Commercial property services</a></li>
+<li><a href="services.html">All services</a></li>
+</ul>
+</div>
+<div>
+<h4>Where we work</h4>
+<ul>
+<li><a href="locations.html">Service area</a></li>
+<li><a href="malta.html">Asphalt paving in Malta, NY</a></li>
+<li><a href="tel:+15184148789">(518) 414-8789</a></li>
+<li><a href="mailto:ronniemariani@rdmcc.com">ronniemariani@rdmcc.com</a></li>
 </ul>
 </div>
 <div>
 <h4>Company</h4>
 <ul>
 <li><a href="about.html">About RDM Construction</a></li>
-<li><a href="contact.html">Contact and service area</a></li>
-<li><a href="tel:+15184148789">(518) 414-8789</a></li>
-<li><a href="mailto:ronniemariani@rdmcc.com">ronniemariani@rdmcc.com</a></li>
-</ul>
-</div>
-<div>
-<h4>Hours</h4>
-<ul>
+<li><a href="contact.html">Contact and free estimates</a></li>
 <li>Mon to Fri, 7:00 am to 6:00 pm</li>
 <li>Sat and Sun, 8:00 am to 5:00 pm</li>
-</ul>
-<h4 class="stack">Follow</h4>
-<ul>
 <li><a href="https://facebook.com/554480981076963" rel="noopener">Facebook</a></li>
 <li><a href="https://www.yelp.com/biz/rdm-asphalt-and-construction-saratoga-springs" rel="noopener">Yelp</a></li>
 </ul>

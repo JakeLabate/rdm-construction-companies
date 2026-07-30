@@ -212,6 +212,24 @@ section{padding:clamp(56px,8vw,96px) 0}
 .on-dark .dl dt{color:var(--brand-lt)}
 .dl dd{margin:6px 0 16px;font-weight:600;line-height:1.5}
 
+/* table */
+.tbl{width:100%;border-collapse:collapse;font-size:.93rem;margin-bottom:1.4em}
+.tbl th,.tbl td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--brand);border-bottom:2px solid var(--ink)}
+.tbl td:first-child{font-weight:700}
+.scroller{overflow-x:auto}
+
+/* index grid for the services hub */
+.idx{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:0 34px}
+.idx section{padding:0}
+.idx h3{border-top:2px solid var(--brand);padding-top:14px;margin-bottom:.6em}
+.idx ul{list-style:none;padding:0;margin:0 0 34px}
+.idx li{margin-bottom:9px}
+.idx a{text-decoration:none;font-weight:600}
+.idx a:hover{text-decoration:underline}
+.idx span{display:block;font-size:.88rem;color:var(--muted);font-weight:400;line-height:1.45}
+
 /* cta band */
 .band{background:var(--ink);color:var(--paper)}
 .band .wrap{padding-top:52px;padding-bottom:52px}
@@ -395,7 +413,7 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <span class="wordmark">RDM Construction<span>Companies LLC</span></span>
 </a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav class="nav" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="paving.html">Paving</a><a href="concrete.html">Concrete</a><a href="site-work.html">Site work</a><a href="snow-removal.html">Snow removal</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a></nav>
+<nav class="nav" id="nav" aria-label="Main"><a href="services.html">Services</a><a href="paving.html">Paving</a><a href="concrete.html">Concrete</a><a href="site-work.html">Site work</a><a href="snow-removal.html">Snow</a><a href="commercial.html">Commercial</a><a href="locations.html">Locations</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a></nav>
 <a class="callbtn" href="tel:+15184148789">Call (518) 414-8789</a>
 </div>
 </header>
@@ -423,7 +441,7 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <li><strong>Text (518) 414-8789.</strong> Text START to (518) 749-4165 to receive offers by text. Messages may be autodialed, consent to texts is not required to purchase our services, and message and data rates may apply.</li>
 </ol>
 <div class="actions">
-<a class="btn btn-solid" href="mailto:ronniemariani@rdmcc.com?subject=Estimate%20request&body=Property%20address%3A%0AResidential%20or%20commercial%3A%0AService%20needed%3A%0ABest%20phone%3A%0ADescription%20of%20the%20problem%3A%0A">Email an estimate request</a>
+<a class="btn btn-solid" href='mailto:ronniemariani@rdmcc.com?subject=Estimate%20request&body=Property%20address%3A%0AResidential%20or%20commercial%3A%0AService%20needed%3A%0ABest%20phone%3A%0ADescription%20of%20the%20problem%3A%0A'>Email an estimate request</a>
 <a class="btn btn-ghost" href="tel:+15184148789">Call (518) 414-8789</a>
 </div>
 </div>
@@ -441,25 +459,30 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <h4>Office</h4>
 <p>422 Broadway, Suite 304<br>Saratoga Springs, NY 12866</p>
 </div>
+<div class="aside stack">
+<h4>Payment methods</h4>
+<p>American Express, Discover, MasterCard, Visa, cash, check, Zelle, Venmo and Cash App.</p>
+</div>
 </div>
 </div>
 </section>
-
 <section class="on-dark">
 <div class="wrap">
-<div class="head">
-<hr class="lane-thin">
-<h2>Service area</h2>
-<p>The Greater Capital Region of New York State, across four counties.</p>
+<div class="head"><hr class="lane-thin"><h2>Where we work</h2>
+<p>The Greater Capital Region of New York State. If your address is not on this list, call and we will confirm coverage.</p></div>
+<dl class="dl"><div><dt>Saratoga County</dt><dd>Saratoga Springs, Wilton, Malta, Ballston Spa, Clifton Park, Mechanicville, Stillwater, Greenfield, Galway, Milton and Round Lake</dd></div><div><dt>Albany County</dt><dd>Albany, Colonie, Guilderland, Bethlehem, Cohoes, Watervliet, Latham and Loudonville</dd></div><div><dt>Schenectady County</dt><dd>Schenectady, Niskayuna, Glenville, Rotterdam and Scotia</dd></div><div><dt>Rensselaer County</dt><dd>Troy, East Greenbush, North Greenbush and Rensselaer</dd></div></dl>
 </div>
-<dl class="dl">
-<div><dt>Saratoga County</dt><dd>Saratoga Springs, Wilton, Malta, Ballston Spa, Clifton Park, Mechanicville, Stillwater, Greenfield, Galway, Milton and Round Lake</dd></div>
-<div><dt>Albany County</dt><dd>Albany, Colonie, Guilderland, Bethlehem, Cohoes, Watervliet, Latham and Loudonville</dd></div>
-<div><dt>Schenectady County</dt><dd>Schenectady, Niskayuna, Glenville, Rotterdam and Scotia</dd></div>
-<div><dt>Rensselaer County</dt><dd>Troy, East Greenbush, North Greenbush and Rensselaer</dd></div>
-<div><dt>Also serving</dt><dd>Queensbury, Glens Falls and Clifton Park</dd></div>
-<div><dt>Payment methods</dt><dd>American Express, Discover, MasterCard, Visa, cash, check, Zelle, Venmo and Cash App</dd></div>
-</dl>
+</section>
+<section class="on-shell">
+<div class="wrap">
+<div class="head"><hr class="lane-thin"><h2>Not sure which service you need?</h2>
+<p>Describe the symptom and we will tell you which trade it belongs to. These are the four we hear most.</p></div>
+<div class="cards">
+<div class="card"><p class="num">Symptom</p><h3>Water in the basement every spring</h3><p>Usually a grading problem before it is a drainage problem. Start with <a href="drainage.html">drainage</a> and <a href="site-work.html">grading</a>.</p></div>
+<div class="card"><p class="num">Symptom</p><h3>The driveway keeps getting potholes</h3><p>If they return in the same spot, the base has failed. See <a href="driveway-paving.html">driveway paving</a>.</p></div>
+<div class="card"><p class="num">Symptom</p><h3>Soil washing onto the patio</h3><p>A grade that needs holding. See <a href="retaining-walls.html">retaining walls</a>.</p></div>
+<div class="card"><p class="num">Symptom</p><h3>The lot looks faded and the lines are gone</h3><p>Sealcoat then restripe, in that order. See <a href="sealcoating.html">sealcoating</a>.</p></div>
+</div>
 </div>
 </section>
 </main>
@@ -470,46 +493,45 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <h4>Pavement</h4>
 <ul>
 <li><a href="paving.html">Asphalt paving and resurfacing</a></li>
-<li><a href="paving.html#sealcoating">Asphalt sealcoating</a></li>
-<li><a href="paving.html#striping">Line striping</a></li>
+<li><a href="driveway-paving.html">Driveway paving</a></li>
+<li><a href="sealcoating.html">Asphalt sealcoating</a></li>
+<li><a href="line-striping.html">Line striping and ADA layout</a></li>
 <li><a href="concrete.html">Concrete installation and repair</a></li>
 </ul>
 </div>
 <div>
 <h4>Site work</h4>
 <ul>
-<li><a href="site-work.html">Excavation and trenching</a></li>
-<li><a href="site-work.html#grading">Site grading</a></li>
-<li><a href="site-work.html#clearing">Lot and site clearing</a></li>
-<li><a href="site-work.html#drainage">Water, sewer and drainage</a></li>
-<li><a href="site-work.html#walls">Retaining walls</a></li>
+<li><a href="site-work.html">Excavation, trenching and grading</a></li>
+<li><a href="drainage.html">Water, sewer and drainage</a></li>
+<li><a href="site-clearing.html">Lot and site clearing</a></li>
+<li><a href="retaining-walls.html">Retaining wall design and installation</a></li>
 </ul>
 </div>
 <div>
-<h4>Winter</h4>
+<h4>Winter and commercial</h4>
 <ul>
-<li><a href="snow-removal.html">Commercial snow plowing</a></li>
-<li><a href="snow-removal.html#residential">Residential plowing</a></li>
-<li><a href="snow-removal.html#deicing">De-icing and salting</a></li>
+<li><a href="snow-removal.html">Snow plowing and removal</a></li>
+<li><a href="commercial.html">Commercial property services</a></li>
+<li><a href="services.html">All services</a></li>
+</ul>
+</div>
+<div>
+<h4>Where we work</h4>
+<ul>
+<li><a href="locations.html">Service area</a></li>
+<li><a href="malta.html">Asphalt paving in Malta, NY</a></li>
+<li><a href="tel:+15184148789">(518) 414-8789</a></li>
+<li><a href="mailto:ronniemariani@rdmcc.com">ronniemariani@rdmcc.com</a></li>
 </ul>
 </div>
 <div>
 <h4>Company</h4>
 <ul>
 <li><a href="about.html">About RDM Construction</a></li>
-<li><a href="contact.html">Contact and service area</a></li>
-<li><a href="tel:+15184148789">(518) 414-8789</a></li>
-<li><a href="mailto:ronniemariani@rdmcc.com">ronniemariani@rdmcc.com</a></li>
-</ul>
-</div>
-<div>
-<h4>Hours</h4>
-<ul>
+<li><a href="contact.html">Contact and free estimates</a></li>
 <li>Mon to Fri, 7:00 am to 6:00 pm</li>
 <li>Sat and Sun, 8:00 am to 5:00 pm</li>
-</ul>
-<h4 class="stack">Follow</h4>
-<ul>
 <li><a href="https://facebook.com/554480981076963" rel="noopener">Facebook</a></li>
 <li><a href="https://www.yelp.com/biz/rdm-asphalt-and-construction-saratoga-springs" rel="noopener">Yelp</a></li>
 </ul>

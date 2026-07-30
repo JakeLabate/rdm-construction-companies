@@ -212,6 +212,24 @@ section{padding:clamp(56px,8vw,96px) 0}
 .on-dark .dl dt{color:var(--brand-lt)}
 .dl dd{margin:6px 0 16px;font-weight:600;line-height:1.5}
 
+/* table */
+.tbl{width:100%;border-collapse:collapse;font-size:.93rem;margin-bottom:1.4em}
+.tbl th,.tbl td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--brand);border-bottom:2px solid var(--ink)}
+.tbl td:first-child{font-weight:700}
+.scroller{overflow-x:auto}
+
+/* index grid for the services hub */
+.idx{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:0 34px}
+.idx section{padding:0}
+.idx h3{border-top:2px solid var(--brand);padding-top:14px;margin-bottom:.6em}
+.idx ul{list-style:none;padding:0;margin:0 0 34px}
+.idx li{margin-bottom:9px}
+.idx a{text-decoration:none;font-weight:600}
+.idx a:hover{text-decoration:underline}
+.idx span{display:block;font-size:.88rem;color:var(--muted);font-weight:400;line-height:1.45}
+
 /* cta band */
 .band{background:var(--ink);color:var(--paper)}
 .band .wrap{padding-top:52px;padding-bottom:52px}
@@ -368,7 +386,7 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <span class="wordmark">RDM Construction<span>Companies LLC</span></span>
 </a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav class="nav" id="nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="paving.html">Paving</a><a href="concrete.html">Concrete</a><a href="site-work.html">Site work</a><a href="snow-removal.html">Snow removal</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<nav class="nav" id="nav" aria-label="Main"><a href="services.html">Services</a><a href="paving.html">Paving</a><a href="concrete.html">Concrete</a><a href="site-work.html">Site work</a><a href="snow-removal.html">Snow</a><a href="commercial.html">Commercial</a><a href="locations.html">Locations</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
 <a class="callbtn" href="tel:+15184148789">Call (518) 414-8789</a>
 </div>
 </header>
@@ -389,35 +407,48 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <div class="wrap">
 <div class="head">
 <hr class="lane-thin">
-<h2>Four things we do, start to finish</h2>
-<p>The same crew handles the whole sequence. That is the reason there are no scheduling gaps between the excavator, the paver and the striping truck, and no second contractor pointing at the first one when something fails.</p>
+<h2>Everything outside the building</h2>
+<p>The same crew handles the whole sequence, from clearing a raw lot through the final coat of striping paint. That is the reason there are no scheduling gaps between the excavator, the paver and the striping truck, and no second contractor pointing at the first one when something fails.</p>
 </div>
 <div class="cards">
 <div class="card">
 <p class="num">01 / Pavement</p>
-<h3>Asphalt paving, sealcoating and line striping</h3>
-<p>New asphalt, overlays, pothole and crack repair, sealcoating, and ADA compliant parking lot layout. We assess the surface and the base before recommending an approach.</p>
+<h3>Asphalt paving and resurfacing</h3>
+<p>New installation, overlays, pothole and crack repair, milling and full depth reclamation for driveways, parking lots and access roads.</p>
 <a class="go" href="paving.html">Paving services</a>
 </div>
 <div class="card">
-<p class="num">02 / Concrete</p>
+<p class="num">02 / Pavement</p>
+<h3>Sealcoating and line striping</h3>
+<p>Two step maintenance that keeps asphalt alive. Sealer on a two to three year cycle, then ADA compliant striping once it cures.</p>
+<a class="go" href="sealcoating.html">Sealcoating services</a>
+</div>
+<div class="card">
+<p class="num">03 / Concrete</p>
 <h3>Concrete installation and repair</h3>
-<p>Driveways, sidewalks, curbs, patios, steps, garage and basement slabs. Formed and finished for a frost line that runs deep and a winter that runs long.</p>
+<p>Driveways, sidewalks, curbs, patios, steps, garage and basement slabs. Formed and finished for a frost line that runs deep.</p>
 <a class="go" href="concrete.html">Concrete services</a>
 </div>
 <div class="card">
-<p class="num">03 / Site work</p>
+<p class="num">04 / Site work</p>
 <h3>Excavation, trenching and grading</h3>
-<p>Foundation digs, utility trenches, drainage correction, lot clearing, retaining walls, and water and sewer line work. Everything that happens before anything gets poured.</p>
+<p>Foundation digs, utility trenches, drainage correction and finish grade. Everything that happens before anything gets poured.</p>
 <a class="go" href="site-work.html">Site work services</a>
 </div>
 <div class="card">
-<p class="num">04 / Winter</p>
+<p class="num">05 / Site work</p>
+<h3>Drainage, clearing and retaining walls</h3>
+<p>Water and sewer lines, French and channel drains, catch basins, dry wells, lot clearing and engineered retaining walls.</p>
+<a class="go" href="drainage.html">Drainage services</a>
+</div>
+<div class="card">
+<p class="num">06 / Winter</p>
 <h3>Snow plowing and removal</h3>
-<p>Seasonal and per storm contracts for commercial lots and residential driveways, with post storm salting, sidewalk clearing and off site snow hauling.</p>
+<p>Seasonal and per storm contracts for commercial lots and residential driveways, with salting, sidewalk clearing and off site hauling.</p>
 <a class="go" href="snow-removal.html">Snow services</a>
 </div>
 </div>
+<p class="stack"><a href="services.html">See the full index of services RDM offers</a></p>
 </div>
 </section>
 
@@ -428,6 +459,7 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <p class="pull">We do not subcontract laborers.</p>
 <p class="lede">Our crews show up and stand behind their own work. On most jobs in the Capital Region the company that quoted you is not the company that shows up. That is not how this one runs.</p>
 <ul class="ticks">
+<li>We do not subcontract laborers. Our crews show up and stand behind their own work.</li>
 <li>Family owned and locally operated, licensed and insured in New York State</li>
 <li>Over 40 years in concrete, paving and excavation across the Capital Region</li>
 <li>Free, no obligation estimates, written and itemized before work starts</li>
@@ -445,6 +477,10 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <h4>Membership</h4>
 <p>Member of the Capital Region Builders and Remodelers Association and the Saratoga County Chamber of Commerce.</p>
 </div>
+<div class="aside stack">
+<h4>One contract, the whole sequence</h4>
+<p>Clear the lot, excavate, trench for utilities, grade for drainage, pour or pave, then seal and stripe. Running that under one contract removes the coordination gaps that come with a separate subcontractor for each phase.</p>
+</div>
 </div>
 </div>
 </section>
@@ -454,32 +490,25 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <div class="head">
 <hr class="lane-thin">
 <h2>Recent work</h2>
-<p>Paving, excavation and winter service across Saratoga County and the surrounding Capital Region.</p>
+<p>Paving, concrete, excavation and winter service across Saratoga County and the surrounding Capital Region.</p>
 </div>
 <div class="panels">
-<a class="panel" href="paving.html" style="--panel-src:url('img/work-paving.webp')"><span>Paving and sealcoating</span></a>
+<a class="panel" href="paving.html" style="--panel-src:url('img/work-paving.webp')"><span>Paving and resurfacing</span></a>
+<a class="panel" href="concrete.html" style="--panel-src:url('img/work-concrete.webp')"><span>Concrete flatwork</span></a>
 <a class="panel" href="site-work.html" style="--panel-src:url('img/work-excavation.webp')"><span>Excavation and grading</span></a>
-<a class="panel" href="snow-removal.html" style="--panel-src:url('img/work-snow.webp')"><span>Snow plowing and removal</span></a>
+<a class="panel" href="line-striping.html" style="--panel-src:url('img/work-striping.webp')"><span>Line striping</span></a>
+<a class="panel" href="site-clearing.html" style="--panel-src:url('img/work-clearing.webp')"><span>Lot and site clearing</span></a>
+<a class="panel" href="snow-removal.html" style="--panel-src:url('img/work-snow.webp')"><span>Snow plowing</span></a>
 </div>
 </div>
 </section>
-
 <section class="on-dark">
 <div class="wrap">
-<div class="head">
-<hr class="lane-thin">
-<h2>Where we work</h2>
-<p>The Greater Capital Region of New York State. If your address is not on this list, call and we will confirm coverage.</p>
+<div class="head"><hr class="lane-thin"><h2>Where we work</h2>
+<p>The Greater Capital Region of New York State. If your address is not on this list, call and we will confirm coverage.</p></div>
+<dl class="dl"><div><dt>Saratoga County</dt><dd>Saratoga Springs, Wilton, Malta, Ballston Spa, Clifton Park, Mechanicville, Stillwater, Greenfield, Galway, Milton and Round Lake</dd></div><div><dt>Albany County</dt><dd>Albany, Colonie, Guilderland, Bethlehem, Cohoes, Watervliet, Latham and Loudonville</dd></div><div><dt>Schenectady County</dt><dd>Schenectady, Niskayuna, Glenville, Rotterdam and Scotia</dd></div><div><dt>Rensselaer County</dt><dd>Troy, East Greenbush, North Greenbush and Rensselaer</dd></div></dl>
 </div>
-<dl class="dl">
-<div><dt>Saratoga County</dt><dd>Saratoga Springs, Wilton, Malta, Ballston Spa, Clifton Park, Mechanicville, Stillwater, Greenfield, Galway, Milton and Round Lake</dd></div>
-<div><dt>Albany County</dt><dd>Albany, Colonie, Guilderland, Bethlehem, Cohoes, Watervliet, Latham and Loudonville</dd></div>
-<div><dt>Schenectady County</dt><dd>Schenectady, Niskayuna, Glenville, Rotterdam and Scotia</dd></div>
-<div><dt>Rensselaer County</dt><dd>Troy, East Greenbush, North Greenbush and Rensselaer</dd></div>
-</dl>
-</div>
-</section>
-<section class="band">
+</section><section class="band">
 <div class="wrap">
 <h2>Free estimate. Written, itemized, no obligation.</h2>
 <p>Tell us the property, the problem, and a photo if you have one. We come out, assess the site, and send a written number. Call, text, or email and we will get you on the schedule.</p>
@@ -497,46 +526,45 @@ footer a:hover{color:var(--brand-lt);text-decoration:underline}
 <h4>Pavement</h4>
 <ul>
 <li><a href="paving.html">Asphalt paving and resurfacing</a></li>
-<li><a href="paving.html#sealcoating">Asphalt sealcoating</a></li>
-<li><a href="paving.html#striping">Line striping</a></li>
+<li><a href="driveway-paving.html">Driveway paving</a></li>
+<li><a href="sealcoating.html">Asphalt sealcoating</a></li>
+<li><a href="line-striping.html">Line striping and ADA layout</a></li>
 <li><a href="concrete.html">Concrete installation and repair</a></li>
 </ul>
 </div>
 <div>
 <h4>Site work</h4>
 <ul>
-<li><a href="site-work.html">Excavation and trenching</a></li>
-<li><a href="site-work.html#grading">Site grading</a></li>
-<li><a href="site-work.html#clearing">Lot and site clearing</a></li>
-<li><a href="site-work.html#drainage">Water, sewer and drainage</a></li>
-<li><a href="site-work.html#walls">Retaining walls</a></li>
+<li><a href="site-work.html">Excavation, trenching and grading</a></li>
+<li><a href="drainage.html">Water, sewer and drainage</a></li>
+<li><a href="site-clearing.html">Lot and site clearing</a></li>
+<li><a href="retaining-walls.html">Retaining wall design and installation</a></li>
 </ul>
 </div>
 <div>
-<h4>Winter</h4>
+<h4>Winter and commercial</h4>
 <ul>
-<li><a href="snow-removal.html">Commercial snow plowing</a></li>
-<li><a href="snow-removal.html#residential">Residential plowing</a></li>
-<li><a href="snow-removal.html#deicing">De-icing and salting</a></li>
+<li><a href="snow-removal.html">Snow plowing and removal</a></li>
+<li><a href="commercial.html">Commercial property services</a></li>
+<li><a href="services.html">All services</a></li>
+</ul>
+</div>
+<div>
+<h4>Where we work</h4>
+<ul>
+<li><a href="locations.html">Service area</a></li>
+<li><a href="malta.html">Asphalt paving in Malta, NY</a></li>
+<li><a href="tel:+15184148789">(518) 414-8789</a></li>
+<li><a href="mailto:ronniemariani@rdmcc.com">ronniemariani@rdmcc.com</a></li>
 </ul>
 </div>
 <div>
 <h4>Company</h4>
 <ul>
 <li><a href="about.html">About RDM Construction</a></li>
-<li><a href="contact.html">Contact and service area</a></li>
-<li><a href="tel:+15184148789">(518) 414-8789</a></li>
-<li><a href="mailto:ronniemariani@rdmcc.com">ronniemariani@rdmcc.com</a></li>
-</ul>
-</div>
-<div>
-<h4>Hours</h4>
-<ul>
+<li><a href="contact.html">Contact and free estimates</a></li>
 <li>Mon to Fri, 7:00 am to 6:00 pm</li>
 <li>Sat and Sun, 8:00 am to 5:00 pm</li>
-</ul>
-<h4 class="stack">Follow</h4>
-<ul>
 <li><a href="https://facebook.com/554480981076963" rel="noopener">Facebook</a></li>
 <li><a href="https://www.yelp.com/biz/rdm-asphalt-and-construction-saratoga-springs" rel="noopener">Yelp</a></li>
 </ul>
